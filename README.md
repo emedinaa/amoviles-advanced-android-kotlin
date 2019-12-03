@@ -1,40 +1,34 @@
 # amoviles-advanced-android-kotlin
 Curso de desarrollo de aplicaciones Android avanzado con Kotlin
 
-## Fragments
+## Storage Options
 
 **Slides**
 
-Fragment https://docs.google.com/presentation/d/1C0dRsJ5y7HYesuPGiNTpLl45AZlNm_v671WQ9LZ_j18/edit?usp=sharing
+Storage Options https://docs.google.com/presentation/d/14voZIOVSiHzuG_z0K1p1Ufu811I03HH8QpHF9CoZ6JE/edit?usp=sharing
 
 Fragments navigation https://docs.google.com/presentation/d/1C0dRsJ5y7HYesuPGiNTpLl45AZlNm_v671WQ9LZ_j18/edit?usp=sharing
 
 **Samples**
 
-Lesson4
+Lesson5
 
-- starter : Proyecto base para trabajar en clase
-- app : Proyecto completo
+- L5Storage : Proyecto donde veremos sobre sharedpreferences y base de datos con sqlite
+- L5Database : Proyecto que contiene un CRUD usando base de datos con sqlite
+- L5Room : Proyecto con CRUD a una base de datos local (sqlite) usando librería Room
 
 **References**
 
-- Support different screen sizes  https://developer.android.com/training/multiscreen/screensizes?hl=es-419
+- Opciones de almacenamiento https://developer.android.com/guide/topics/data/data-storage
 
-- Fragment https://developer.android.com/reference/android/app/Fragment.html
+- SharedPreferences https://developer.android.com/training/data-storage/shared-preferences
 
-- Developer Guides : Fragments https://developer.android.com/guide/components/fragments.html
+- SQLite https://developer.android.com/training/data-storage/sqlite
 
-- Building a Dynamic UI with Fragments https://developer.android.com/training/basics/fragments/index.html
+- Room https://developer.android.com/training/data-storage/room
+
+- Android Room codelab https://codelabs.developers.google.com/codelabs/android-room-with-a-view-kotlin/#0
+
+- Android Persistence codelab https://codelabs.developers.google.com/codelabs/android-persistence/#0
 
 
-- Material Design https://material.io/design/components/bottom-navigation.html#behavior
-
-- Activity https://developer.android.com/training/basics/firstapp/starting-activity?hl=es-419
-
-- Bottom Navigation https://material.io/develop/android/components/bottom-navigation-view/
-
-- View Pager https://developer.android.com/training/animation/screen-slide
-
-- Navigation drawer https://developer.android.com/training/implementing-navigation/nav-drawer?hl=es-419
-
-- Swipe & Tabs https://developer.android.com/training/implementing-navigation/lateral?hl=es-419
