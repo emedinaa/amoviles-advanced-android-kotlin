@@ -11,7 +11,9 @@ Fragments navigation https://docs.google.com/presentation/d/1C0dRsJ5y7HYesuPGiNT
 
 **Samples**
 
-Lesson4
+Fragments
+
+En este ejemplo veremos todos los puntos importantes que debemos conocer sobre los Fragments.
 
 - starter : Proyecto base para trabajar en clase
 - app : Proyecto completo
