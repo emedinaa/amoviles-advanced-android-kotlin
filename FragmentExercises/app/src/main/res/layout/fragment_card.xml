@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="80dp"
+    android:paddingBottom="80dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_white_rounded">
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/user01"
+            android:id="@+id/iviUser"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/iviUser"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Fulano Pérez" />
+    </RelativeLayout>
+
+
+</FrameLayout>
