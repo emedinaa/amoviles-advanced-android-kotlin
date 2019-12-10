@@ -1,4 +1,0 @@
-include ':app'
-//project(':core').projectDir = new File(settingsDir, '../Library/core')
-include ':core'
-project(':core').projectDir = new File(rootDir, '../Library/core')
