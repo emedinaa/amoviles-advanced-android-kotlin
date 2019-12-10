@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">RestaurantApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="menu_title">Menú</string>
+    <string name="entradas_title">Entradas</string>
+    <string name="segundos_title">Segundos</string>
+    <string name="sopas_title">Sopas</string>
+    <string name="postres_title">Postres</string>
+    <string name="vinos_title">Vinos</string>
+    <string name="top_orders">Los más pedidos</string>
+    <string name="log_in">LogIn</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="reservation">Reservación</string>
+    <string name="order">Ordenar</string>
+    <string name="add">Agregar</string>
+    <string name="confirm">Confirmar</string>
+    <string name="favorite">Preferidos</string>
+    <string name="confirm_order">Confirmar pedido</string>
+    <string name="total">Total</string>
+    <string name="cant">Cant.</string>
+    <string name="plate">Plato</string>
+    <string name="unit_price">P.Unit.</string>
+    <string name="total_price">P.Total</string>
+    <string name="cheff_content">
+        <![CDATA[
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.
+        \n\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...
+        ]]>
+    </string>
+</resources>

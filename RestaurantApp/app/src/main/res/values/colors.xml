@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c10b19</color>
+    <color name="colorPrimaryDark">#1a1613</color>
+    <color name="primarycolortext">@color/colorPrimary</color>
+
+    <color name="colorAccent">#FF4081</color>
+    <color name="bg_black">#1a1717</color>
+    <!-- transparency https://stackoverflow.com/questions/15852122/hex-transparency-in-colors -->
+    <color name="red70">#B3c10b19</color>
+</resources>

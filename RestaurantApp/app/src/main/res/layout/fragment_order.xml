@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textOrder"
+        tools:background="@android:color/darker_gray"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textAllCaps="true"
+        android:background="@color/red70"
+        android:layout_alignParentBottom="true"
+        android:textStyle="bold"
+        android:text="Confirmar pedido" />
+
+</RelativeLayout>
