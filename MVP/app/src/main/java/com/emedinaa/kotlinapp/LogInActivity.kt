@@ -15,20 +15,21 @@ import kotlinx.android.synthetic.main.activity_log_in.*
 class LogInActivity : AppCompatActivity(), LogInContract.View {
 
     override lateinit var presenter: LogInContract.Presenter
-    lateinit var weakPresenter:LogInContract.Presenter
+    //lateinit var weakPresenter:LogInContract.Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
         presenter= LogInPresenter(this, Injection.provideLogInRepository())
 
-        weakPresenter= LogInWeakPresenter(Injection.provideLogInRepository())
-        weakPresenter.setContractView(this)
+        //weakPresenter= LogInWeakPresenter(Injection.provideLogInRepository())
+        //weakPresenter.setContractView(this)
 
         //events
         buttonLogIn.setOnClickListener {
-            //presenter.logIn()
-            weakPresenter.logIn()
+            presenter.logIn()
+            //presenter.logInDR()
+            //weakPresenter.logIn()
         }
     }
 

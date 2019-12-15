@@ -16,6 +16,7 @@ interface LogInContract {
 
     interface Presenter{
         fun logIn()
+        fun logInDR()
         fun setContractView(view :View)
     }
 }

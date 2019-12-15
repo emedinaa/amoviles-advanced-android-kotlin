@@ -14,5 +14,6 @@ class KotlinMVPApplication:Application() {
         //volley
         VolleyLog.setTag("Volley")
         Log.isLoggable("Volley", Log.VERBOSE)
+        VolleyLog.DEBUG=true
     }
 }

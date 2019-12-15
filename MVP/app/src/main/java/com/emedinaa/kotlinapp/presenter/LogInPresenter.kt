@@ -1,11 +1,12 @@
 package com.emedinaa.kotlinapp.presenter
 
+import com.emedinaa.kotlinapp.data.DataResult
 import com.emedinaa.kotlinapp.data.LogInRepository
 import com.emedinaa.kotlinapp.data.OperationCallback
 import com.emedinaa.kotlinapp.model.User
 import com.emedinaa.kotlinapp.view.LogInContract
 
-class LogInPresenter(val view: LogInContract.View, val repository: LogInRepository):LogInContract.Presenter{
+class LogInPresenter(val view: LogInContract.View, private val repository: LogInRepository):LogInContract.Presenter{
 
     init {
         view.presenter=this
@@ -36,8 +37,31 @@ class LogInPresenter(val view: LogInContract.View, val repository: LogInReposito
                     }
                 }
             })
-        } else {
+        }
+    }
 
+    override fun logInDR() {
+        if (view.validateForm()) {
+            view.showLoadingView()
+
+            repository.logInDR(view.usernameField(), view.passwordField()){
+                when(it){
+                    is DataResult.Success ->{
+                        view.hideLoadingView()
+                        view.goToMainView(it.data)
+                    }
+
+                    is DataResult.InvalidUserOrPw ->{
+                        view.hideLoadingView()
+                        view.showError(it.message)
+                    }
+
+                    is DataResult.Failure ->{
+                        view.hideLoadingView()
+                        view.showError(it.e.message?:"Ocurrió un error")
+                    }
+                }
+            }
         }
     }
 

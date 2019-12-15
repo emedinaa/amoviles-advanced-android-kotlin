@@ -15,6 +15,10 @@ class LogInWeakPresenter(private val repository: LogInRepository):LogInContract.
         this.view.get()?.presenter=this
     }
 
+    override fun logInDR() {
+
+    }
+
     override fun logIn() {
         view.get()?.let {itView->
             if (itView.validateForm()) {

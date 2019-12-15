@@ -6,6 +6,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.emedinaa.kotlinapp.model.User
 import com.google.gson.Gson
 import org.json.JSONException
 import org.json.JSONObject
@@ -18,6 +19,45 @@ class LogInRepository(val context:Context) {
     private val url= EndPoints.logIn()
     private val gson= Gson()
 
+    fun logInDR( username:String,  password:String,result:(data:DataResult<User?>)->Unit){
+        val jsonObject = JSONObject()
+        jsonObject.put("username",username)
+        jsonObject.put("password",password)
+
+        val jsonObjectRequest= JsonObjectRequest(Request.Method.POST,url,jsonObject,
+            Response.Listener { response ->
+                Log.v("CONSOLE",response.toString())
+                var jsonObject:JSONObject?
+                try {
+                    jsonObject=JSONObject(response.toString())
+                    val loginResponse: LogInResponse = gson.fromJson(
+                        jsonObject.toString(),
+                        LogInResponse::class.java
+                    )
+                    Log.v("CONSOLE","LogInResponse $loginResponse")
+                    when {
+                        loginResponse.isSuccess() -> result(DataResult.Success(loginResponse.data))
+                        else -> result(DataResult.Failure(
+                            Exception(loginResponse.msg)))
+                    }
+
+                }catch (e:JSONException){
+                    result(DataResult.Failure(e))
+                }
+            },
+            Response.ErrorListener { error ->
+                Log.v("CONSOLE","Error message ${error.message} responseError ${error.networkResponse?.statusCode}")
+                val messageError= "error : ${error.networkResponse?.statusCode} ".plus("message ${error.message}")
+
+                if(error.networkResponse?.statusCode==404){
+                    result(DataResult.Failure(Exception("Usuario o password incorrectos")))
+                }else{
+                    result(DataResult.Failure(Exception(messageError)))
+                }
+            }
+        )
+        requestQueue.add(jsonObjectRequest)
+    }
 
     fun logIn( username:String,  password:String,callback: OperationCallback){
         val jsonObject = JSONObject()
@@ -45,8 +85,8 @@ class LogInRepository(val context:Context) {
                 }
             },
             Response.ErrorListener { error ->
-                Log.v("CONSOLE","message ${error.message} responseError ${error.networkResponse.statusCode}")
-                val messageError= "error : ${error.networkResponse.statusCode} ".plus("message ${error.message}")
+                Log.v("CONSOLE","message ${error.message} responseError ${error.networkResponse?.statusCode}")
+                val messageError= "error : ${error.networkResponse?.statusCode} ".plus("message ${error.message}")
                 callback.onError(messageError)
             }
         )
