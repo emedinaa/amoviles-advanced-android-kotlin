@@ -1,34 +1,41 @@
 # amoviles-advanced-android-kotlin
 Curso de desarrollo de aplicaciones Android avanzado con Kotlin
 
-## Storage Options
+**Architecture**
 
 **Slides**
 
-Storage Options https://docs.google.com/presentation/d/14voZIOVSiHzuG_z0K1p1Ufu811I03HH8QpHF9CoZ6JE/edit?usp=sharing
-
-Fragments navigation https://docs.google.com/presentation/d/1C0dRsJ5y7HYesuPGiNTpLl45AZlNm_v671WQ9LZ_j18/edit?usp=sharing
+Architecture https://docs.google.com/presentation/d/10JqHsaHvIDduFdQI5WAINKSckrJteHLMwTDve2aOz-Y/edit?usp=sharing
 
 **Samples**
 
-Lesson5
-
-- L5Storage : Proyecto donde veremos sobre sharedpreferences y base de datos con sqlite
-- L5Database : Proyecto que contiene un CRUD usando base de datos con sqlite
-- L5Room : Proyecto con CRUD a una base de datos local (sqlite) usando librería Room
+- L7MVP  : Proyecto utilizando el patrón MVP (Model View Presenter).
+- L7MVVM : Proyecto utilizando el patrón MVVM (Model View ViewModel).
 
 **References**
 
-- Opciones de almacenamiento https://developer.android.com/guide/topics/data/data-storage
+ - Principios S.O.L.I.D https://academy.realm.io/posts/learning-path-solid-principles-for-android/
 
-- SharedPreferences https://developer.android.com/training/data-storage/shared-preferences
+ - Android Architecture Blueprints https://github.com/googlesamples/android-architecture
 
-- SQLite https://developer.android.com/training/data-storage/sqlite
+ - MVP Pattern (Microsoft) https://msdn.microsoft.com/en-us/library/ff649571.aspx
 
-- Room https://developer.android.com/training/data-storage/room
+ - GUI Architectures (Martin Fowler) https://martinfowler.com/eaaDev/uiArchs.html
 
-- Android Room codelab https://codelabs.developers.google.com/codelabs/android-room-with-a-view-kotlin/#0
+ - MVC, MVP , MVVM (Realm) https://academy.realm.io/posts/eric-maxwell-mvc-mvp-and-mvvm-on-android/
 
-- Android Persistence codelab https://codelabs.developers.google.com/codelabs/android-persistence/#0
+ - Ejemplo MVP
+ https://github.com/emedinaa/android-mvp
+ 
+
+ - Principios S.O.L.I.D https://academy.realm.io/posts/learning-path-solid-principles-for-android/
+
+ - Android Architecture Blueprints https://github.com/googlesamples/android-architecture
+
+ - Ejemplo MVP https://github.com/emedinaa/android-mvp
+ 
+ - Ejemplo MVVM https://github.com/emedinaa/kotlin-mvvm
+ 
+ - Clean Architecture https://docs.google.com/presentation/d/1Eg2V_0j0UO1V3gvYBMYomsMjS9cxD-p-CldPB68ZQxs/edit?usp=sharing
 
 
