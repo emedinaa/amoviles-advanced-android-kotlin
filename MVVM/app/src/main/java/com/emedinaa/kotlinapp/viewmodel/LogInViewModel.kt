@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.emedinaa.kotlinapp.data.OperationCallback
 import com.emedinaa.kotlinapp.model.AuthenticationDataSource
+import com.emedinaa.kotlinapp.model.AuthenticationRepository
 import com.emedinaa.kotlinapp.model.User
 
 class LogInViewModel(private val repository: AuthenticationDataSource):ViewModel(){
@@ -20,14 +21,19 @@ class LogInViewModel(private val repository: AuthenticationDataSource):ViewModel
 
     fun logIn(username:String,password:String){
         _isViewLoading.postValue(true)
+
         repository.logIn(username,password,object :OperationCallback{
             override fun onError(obj: Any?) {
+
                 _isViewLoading.postValue(false)
+
                 _onMessageError.postValue( obj)
             }
 
             override fun onSuccess(mUser: User?) {
+
                 _isViewLoading.postValue(false)
+
                 _user.value= mUser
             }
         })

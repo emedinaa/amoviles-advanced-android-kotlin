@@ -6,7 +6,8 @@ import com.emedinaa.kotlinapp.data.OperationCallback
 import com.emedinaa.kotlinapp.model.User
 import com.emedinaa.kotlinapp.view.LogInContract
 
-class LogInPresenter(val view: LogInContract.View, private val repository: LogInRepository):LogInContract.Presenter{
+class LogInPresenter(val view: LogInContract.View,
+                     private val repository: LogInRepository):LogInContract.Presenter{
 
     init {
         view.presenter=this

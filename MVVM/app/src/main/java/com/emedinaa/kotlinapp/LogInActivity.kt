@@ -25,7 +25,8 @@ class LogInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
-        viewModel = ViewModelProviders.of(this, ViewModelFactory(Injection.provideLogInRepository())).get(LogInViewModel::class.java)
+        viewModel = ViewModelProviders.of(this, ViewModelFactory(
+            Injection.provideLogInRepository())).get(LogInViewModel::class.java)
 
         viewModel.isViewLoading.observe(this,isViewLoadingObserver)
         viewModel.onMessageError.observe(this,onMessageErrorObserver)

@@ -50,7 +50,7 @@ class LogInRepository(val context:Context) {
                 val messageError= "error : ${error.networkResponse?.statusCode} ".plus("message ${error.message}")
 
                 if(error.networkResponse?.statusCode==404){
-                    result(DataResult.Failure(Exception("Usuario o password incorrectos")))
+                    result(DataResult.InvalidUserOrPw("Usuario o password incorrectos"))
                 }else{
                     result(DataResult.Failure(Exception(messageError)))
                 }
