@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import com.emedinaa.kotlinapp.adapter.NoteAdapter
+import com.emedinaa.kotlinapp.decorator.SpacesItemDecorator
 import com.emedinaa.kotlinapp.model.Note
 import com.emedinaa.kotlinapp.storage.NoteDatabase
 import com.emedinaa.kotlinapp.storage.NoteRepository
@@ -30,8 +31,10 @@ class NoteListActivity : AppCompatActivity() {
 
         //val dividerV = DividerItemDecoration(this,DividerItemDecoration.VERTICAL)
         //val dividerH = DividerItemDecoration(this,DividerItemDecoration.HORIZONTAL)
+        val spacesItem = SpacesItemDecorator(20)
         recyclerViewNotes.apply {
             layoutManager = GridLayoutManager(this@NoteListActivity,2)
+            addItemDecoration(spacesItem)
             //addItemDecoration(dividerV)
             //addItemDecoration(dividerH)
             adapter= noteAdapter
