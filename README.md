@@ -1,34 +1,18 @@
 # amoviles-advanced-android-kotlin
 Curso de desarrollo de aplicaciones Android avanzado con Kotlin
 
-## Storage Options
-
-**Slides**
-
-Storage Options https://docs.google.com/presentation/d/14voZIOVSiHzuG_z0K1p1Ufu811I03HH8QpHF9CoZ6JE/edit?usp=sharing
-
-Fragments navigation https://docs.google.com/presentation/d/1C0dRsJ5y7HYesuPGiNTpLl45AZlNm_v671WQ9LZ_j18/edit?usp=sharing
-
-**Samples**
-
-Lesson5
-
-- L5Storage : Proyecto donde veremos sobre sharedpreferences y base de datos con sqlite
-- L5Database : Proyecto que contiene un CRUD usando base de datos con sqlite
-- L5Room : Proyecto con CRUD a una base de datos local (sqlite) usando librería Room
+Proyecto Restaunte usando conexión por web sockets.
 
 **References**
 
-- Opciones de almacenamiento https://developer.android.com/guide/topics/data/data-storage
+- Socket.io https://socket.io/
 
-- SharedPreferences https://developer.android.com/training/data-storage/shared-preferences
+- Socket.io Android https://socket.io/blog/native-socket-io-and-android/
 
-- SQLite https://developer.android.com/training/data-storage/sqlite
+- Socket.io Client Java https://github.com/socketio/socket.io-client-java
 
-- Room https://developer.android.com/training/data-storage/room
+- Scarlet / Websocket Client https://github.com/Tinder/Scarlet
 
-- Android Room codelab https://codelabs.developers.google.com/codelabs/android-room-with-a-view-kotlin/#0
+- NodeJs & Socket.io https://carlosazaustre.es/websockets-como-utilizar-socket-io-en-tu-aplicacion-web/
 
-- Android Persistence codelab https://codelabs.developers.google.com/codelabs/android-persistence/#0
-
-
+- Github Socket.io https://github.com/socketio
