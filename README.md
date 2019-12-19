@@ -13,9 +13,12 @@ Fragments navigation https://docs.google.com/presentation/d/1C0dRsJ5y7HYesuPGiNT
 
 Lesson5
 
-- L5Storage : Proyecto donde veremos sobre sharedpreferences y base de datos con sqlite
-- L5Database : Proyecto que contiene un CRUD usando base de datos con sqlite
-- L5Room : Proyecto con CRUD a una base de datos local (sqlite) usando librería Room
+- Storage : Proyecto donde veremos sobre sharedpreferences y base de datos con sqlite
+- Database : Proyecto que contiene un CRUD usando base de datos con sqlite
+- Room : Proyecto donde realizamos un CRUD a una base de datos local (sqlite) usando la biblioteca Room
+- RoomCoroutines : Proyecto donde realizamos un CRUD a una base de datos local (sqlite) usando Coroutines
+- Realm : Proyecto donde realizamos un CRUD a una base de datos local usando la biblioteca Realm
+- RoomPrePopulated : Ejemplo práctico donde vemos como trabajar con BD pre probabladas.
 
 **References**
 
