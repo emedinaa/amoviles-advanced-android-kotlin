@@ -1,9 +1,16 @@
 # amoviles-advanced-android-kotlin
 Curso de desarrollo de aplicaciones Android avanzado con Kotlin
 
-Proyecto Restaunte usando conexión por web sockets.
+Proyecto Restaurante usando conexión por web sockets.
 
+**Samples**
+
+ - RestaurantApp , proyecto en kotlin donde el usuario puede ver las categorías, platos y puede solicitar un pedido.
+ - ChefApp, proyecto escrito en Java , donde el personal de cocina recibe las ordenes de los clientes.
+ 
 **References**
+
+- Websockets https://blog.teamtreehouse.com/an-introduction-to-websockets
 
 - Socket.io https://socket.io/
 
