@@ -5,13 +5,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    //compileSdkVersion 29
     compileSdkVersion rootProject.compileSdkVersion
     defaultConfig {
         applicationId "com.emedinaa.kotlinapp"
-        //minSdkVersion 14
         minSdkVersion rootProject.minSdkVersion
-        //targetSdkVersion 29
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
@@ -32,6 +29,8 @@ dependencies {
     implementation "androidx.core:core-ktx:$androidXVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.cardview:cardview:$cardViewVersion"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
