@@ -1,34 +1,59 @@
 # amoviles-advanced-android-kotlin
 Curso de desarrollo de aplicaciones Android avanzado con Kotlin
 
-## Storage Options
-
-**Slides**
-
-Storage Options https://docs.google.com/presentation/d/14voZIOVSiHzuG_z0K1p1Ufu811I03HH8QpHF9CoZ6JE/edit?usp=sharing
-
-Fragments navigation https://docs.google.com/presentation/d/1C0dRsJ5y7HYesuPGiNTpLl45AZlNm_v671WQ9LZ_j18/edit?usp=sharing
+**Google Play / Maps SDK / Locations**
 
 **Samples**
 
-Lesson5
-
-- L5Storage : Proyecto donde veremos sobre sharedpreferences y base de datos con sqlite
-- L5Database : Proyecto que contiene un CRUD usando base de datos con sqlite
-- L5Room : Proyecto con CRUD a una base de datos local (sqlite) usando librería Room
+- Google Play : Hacemos un review de todo lo necesario para tener nuestra app lista para subirla a la tienda, firmar nuestra app, asi como tambien la consola de Google Play.
+- MapsSDK : Ejemplo práctico donde veremos como usar el SDK de Google Maps, cómo configurarlo, usar eventos y marcadores.
+- RealtimeTracking / RealtimeDisplay : Ejemplo práctico usando locations y Firebase para simular un tracking en realtime
 
 **References**
 
-- Opciones de almacenamiento https://developer.android.com/guide/topics/data/data-storage
+- Google Maps Platform https://cloud.google.com/maps-platform/
 
-- SharedPreferences https://developer.android.com/training/data-storage/shared-preferences
+- Maps SDK for Android https://developers.google.com/maps/documentation/android-sdk/intro
 
-- SQLite https://developer.android.com/training/data-storage/sqlite
+- Google Developers Console https://console.developers.google.com
 
-- Room https://developer.android.com/training/data-storage/room
+- Google Maps Android samples https://github.com/googlemaps/android-samples
 
-- Android Room codelab https://codelabs.developers.google.com/codelabs/android-room-with-a-view-kotlin/#0
+- Github/Google Maps https://github.com/googlemaps
 
-- Android Persistence codelab https://codelabs.developers.google.com/codelabs/android-persistence/#0
+- Google Play console https://developer.android.com/distribute/console/
+
+- Google Play Developer API https://developer.android.com/google/play/developer-api?hl=es-419
+
+- Android Proguard https://developer.android.com/studio/build/shrink-code?hl=es-419
+
+- Practical ProGuard rules samples https://medium.com/androiddevelopers/practical-proguard-rules-examples-5640a3907dc9
+
+- ProGuard https://www.guardsquare.com/en/products/proguard
+
+- Firmar tu App https://developer.android.com/studio/publish/app-signing?hl=es-419
+
+- Publicar app https://developer.android.com/studio/publish/?hl=es-419
+
+- Google Play console dashboard https://developer.android.com/distribute/console/index.html
+
+- Google play console https://play.google.com/apps/publish/
+
+- Build Your App from the Command Line https://developer.android.com/studio/build/building-cmdline.html
+
+- Configure Build Variants https://developer.android.com/studio/build/build-variants.html
+
+- App Privay Policy generator https://app-privacy-policy-generator.firebaseapp.com/
+
+- Developer Policy Center https://play.google.com/about/developer-content-policy/#!?modal_active=none
+
+- Google Play Developer API https://developers.google.com/android-publisher/
+
+- Android Developers Blog https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html
+
+- CrashLytics https://fabric.io/kits/android/crashlytics
+
+- Firebase Crash Reporting https://firebase.google.com/docs/crash/?hl=es-419
+
 
 
