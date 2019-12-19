@@ -1,9 +1,9 @@
 # amoviles-advanced-android-kotlin
 Curso de desarrollo de aplicaciones Android avanzado con Kotlin
 
-Proyecto Restaurante usando conexión por web sockets.
+**Proyecto Restaurante usando conexión por web sockets**
 
-**References**
+## References
 
 - Websockets https://blog.teamtreehouse.com/an-introduction-to-websockets
 
