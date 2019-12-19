@@ -12,11 +12,11 @@ class SpacesItemDecorator(val space:Int):RecyclerView.ItemDecoration() {
         parent: RecyclerView,
         state: RecyclerView.State
     ) {
-        outRect.left = space;
-        outRect.right = space;
-        outRect.bottom = space;
+        outRect.left = space
+        outRect.right = space
+        outRect.bottom = space
 
-        if (parent.getChildLayoutPosition(view) == 0) {
+        if (parent.getChildLayoutPosition(view) == 0 || parent.getChildLayoutPosition(view) == 1 ) {
             outRect.top = space
         } else {
             outRect.top = 0
