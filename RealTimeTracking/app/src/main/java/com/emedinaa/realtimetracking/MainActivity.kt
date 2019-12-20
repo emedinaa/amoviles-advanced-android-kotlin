@@ -8,6 +8,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import kotlinx.android.synthetic.main.activity_main.*
+import android.app.ActivityManager
+import android.view.View
 
 class MainActivity : AppCompatActivity(),ActivityCompat.OnRequestPermissionsResultCallback {
 
@@ -19,10 +21,27 @@ class MainActivity : AppCompatActivity(),ActivityCompat.OnRequestPermissionsResu
 
         buttonStart.setOnClickListener {
             startService(Intent(MainActivity@this, TrackerService::class.java))
+            updateButtons()
         }
 
         buttonStop.setOnClickListener {
             stopService(Intent(MainActivity@this, TrackerService::class.java))
+            updateButtons()
+        }
+
+        buttonStart.visibility = View.GONE
+        buttonStop.visibility = View.GONE
+
+        updateButtons()
+    }
+
+    private fun updateButtons(){
+        if(isServiceRunning(TrackerService::class.java)){
+            buttonStop.visibility = View.VISIBLE
+            buttonStart.visibility= View.GONE
+        }else{
+            buttonStop.visibility = View.GONE
+            buttonStart.visibility= View.VISIBLE
         }
     }
 
@@ -30,21 +49,14 @@ class MainActivity : AppCompatActivity(),ActivityCompat.OnRequestPermissionsResu
         super.onResume()
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
             == PackageManager.PERMISSION_GRANTED) {
-            // Permission is already available, start camera preview
-
         } else {
-            // Permission is missing and must be requested.
             requestPermission()
         }
     }
 
     private fun requestPermission() {
-        // Permission has not been granted and must be requested.
         if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)) {
-            // Provide an additional rationale to the user if the permission was not granted
-            // and the user would benefit from additional context for the use of the permission.
-            // Display a SnackBar with cda button to request the missing permission.
 
         }else{
 
@@ -54,17 +66,22 @@ class MainActivity : AppCompatActivity(),ActivityCompat.OnRequestPermissionsResu
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        //super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        // BEGIN_INCLUDE(onRequestPermissionsResult)
         if (requestCode == PERMISSION_REQUEST) {
-            // Request for camera permission.
             if (grantResults.size == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
 
             } else {
-                // Permission request was denied.
                Toast.makeText(this, "Permiso denegado",Toast.LENGTH_SHORT).show()
             }
         }
-        // END_INCLUDE(onRequestPermissionsResult)
+    }
+
+    private fun isServiceRunning(serviceClass: Class<*>): Boolean {
+        val manager = getSystemService(ACTIVITY_SERVICE) as ActivityManager
+        for (service in manager.getRunningServices(Integer.MAX_VALUE)) {
+            if (serviceClass.name == service.service.className) {
+                return true
+            }
+        }
+        return false
     }
 }

@@ -1,15 +1,12 @@
 package com.emedinaa.realtimetracking
 
-import android.Manifest
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationServices
-import android.Manifest.permission
 import android.Manifest.permission.ACCESS_FINE_LOCATION
 import androidx.core.content.ContextCompat
-import android.R.attr.path
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.DatabaseReference
 import com.google.android.gms.location.LocationResult

@@ -84,13 +84,15 @@ class MainActivity : AppCompatActivity() ,OnMapReadyCallback {
 
             val builder = LatLngBounds.Builder()
 
+            Log.v("CONSOLE","markers size ${mMarkers.size}")
             for ((_,v) in mMarkers){
                 v?.let {
                     builder.include(it.position)
                 }
 
             }
-            googleMap?.animateCamera(CameraUpdateFactory.newLatLngBounds(builder.build(), 300))
+            //googleMap?.animateCamera(CameraUpdateFactory.newLatLngBounds(builder.build(), 10))
+            googleMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(location,13f))
         }
     }
 }
