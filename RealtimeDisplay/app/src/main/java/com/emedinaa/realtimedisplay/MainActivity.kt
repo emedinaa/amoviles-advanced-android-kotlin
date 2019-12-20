@@ -12,21 +12,19 @@ import com.google.firebase.database.FirebaseDatabase
 
 import android.util.Log
 import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.model.LatLngBounds
-import com.google.android.gms.maps.model.MarkerOptions
-
+import com.google.android.gms.maps.model.*
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
-
 
 
 class MainActivity : AppCompatActivity() ,OnMapReadyCallback {
 
     private var googleMap: GoogleMap?=null
     private var mMarkers = mutableMapOf<String?,Marker?>()
+    private  var polyline:Polyline ?=null
 
     override fun onMapReady(map: GoogleMap?) {
         googleMap= map
+        polyline = googleMap?.addPolyline(PolylineOptions())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +36,7 @@ class MainActivity : AppCompatActivity() ,OnMapReadyCallback {
 
         subscribeToUpdates()
     }
+
 
     private fun subscribeToUpdates(){
 
@@ -93,6 +92,16 @@ class MainActivity : AppCompatActivity() ,OnMapReadyCallback {
             }
             //googleMap?.animateCamera(CameraUpdateFactory.newLatLngBounds(builder.build(), 10))
             googleMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(location,13f))
+            addPoint(location)
         }
+    }
+
+    private fun addPoint(latLng:LatLng){
+        val points = polyline?.points
+        if(points?.contains(latLng)==true){
+            return
+        }
+        points?.add(latLng)
+        polyline?.points= points
     }
 }
