@@ -63,16 +63,23 @@ class LogInView @JvmOverloads constructor(
         user?.let {
             Logger.v("user $it")
             showLogInViewSession()
+            verifySocket()
         } ?: run {
             logOut()
         }
     }
 
     private fun logOut() {
+        socketManager.clearSession()
         PreferencesHelper.signOut(context)
     }
 
 
+    private fun verifySocket(){
+        if(!socketManager.isConnected()){
+            //startSocket()
+        }
+    }
     private fun logIn(){
         showLoadingView()
         val username:String= editTextEmail.text.toString().trim()
@@ -132,7 +139,6 @@ class LogInView @JvmOverloads constructor(
                     val socketResponse = SocketMapper().convert(data)
                     Log.v("CONSOLE", "EMIT LogIn $socketResponse")
                     if (socketResponse.success) {
-                        saveSession()
                         Cart.createOrder(user?.id?:"-1")
                         post {
                             saveSession()
